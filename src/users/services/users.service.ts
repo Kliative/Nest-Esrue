@@ -2,7 +2,7 @@ import { Injectable, HttpService } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AxiosResponse } from 'axios';
-import { User } from '../user.model';
+import { User } from '../models/user.model';
 
 @Injectable()
 export class UsersService {
