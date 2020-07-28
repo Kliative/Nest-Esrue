@@ -8,12 +8,10 @@ import { User } from '../models/user.model';
 export class UsersService {
     constructor(
         private httpService: HttpService
-    ) {}
-
+    ) { }
+    // gets all Users form jsonplaceholder and returns an AxiosResponse Observable
     findAll(): Observable<AxiosResponse<User[]>> {
         return this.httpService.get('https://jsonplaceholder.typicode.com/users');
     }
-
-
 }
 
