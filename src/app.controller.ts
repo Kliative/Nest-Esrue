@@ -1,5 +1,4 @@
 import { Controller, Request,Get, Post, UseGuards } from '@nestjs/common';
-import { AppService } from './app.service';
 import { AuthService } from './auth/services/auth.service';
 import { JwtAuthGuard } from './auth/guards/jwt.guard';
 import { UsersService } from './users/services/users.service';
@@ -23,4 +22,5 @@ export class AppController {
     });
 
   }
+
 }
