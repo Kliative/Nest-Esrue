@@ -13,7 +13,7 @@ import { AuthController } from './controllers/auth.controller';
         UsersModule,
         PassportModule,
         JwtModule.register({
-            // dont store here in real app
+            // dont store here in production app
             secret: jwtConstants.secret,
             signOptions: { expiresIn: '60s' },
         }),
