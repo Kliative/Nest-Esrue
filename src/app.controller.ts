@@ -1,9 +1,12 @@
-import { Controller, Request, Get, Post, UseGuards } from '@nestjs/common';
-import { AuthService } from './auth/services/auth.service';
-import { JwtAuthGuard } from './auth/guards/jwt.guard';
-import { UsersService } from './users/services/users.service';
-import { User } from './users/models/user.model';
-import { map, first } from 'rxjs/operators';
+import { Controller, Get } from '@nestjs/common';
+import { AppService } from './app.service';
 
 @Controller()
-export class AppController {}
+export class AppController {
+  constructor(private readonly appService: AppService) {}
+
+  @Get()
+  getHello(): string {
+    return this.appService.getHello();
+  }
+}
